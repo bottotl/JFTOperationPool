@@ -1,0 +1,6 @@
+framework module Pods_JFTOperationPool {
+  umbrella header "Pods-JFTOperationPool-umbrella.h"
+
+  export *
+  module * { export * }
+}
