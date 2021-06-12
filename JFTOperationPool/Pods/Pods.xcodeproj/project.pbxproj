@@ -7,84 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02B7851323A48517E9C438B1F21F3528 /* JFTAtlasRenderElementOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F0037439AB75EB9A24B46FF86B350338 /* JFTAtlasRenderElementOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095E1F45802E0D3856E4A8A23196708E /* JFTAtlasRenderElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFFF1FE0D71DE64F310A07CB5CEFBA9 /* JFTAtlasRenderElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15B7858079A137E513A3FF508085DB99 /* JFTOperationPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9628777E85FAB5EE2A964F7444C08D8F /* JFTOperationPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24D0968AE6BDA68C29319FFF6884B294 /* Pods-JFTOperationPool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2043E70D05F2BE9C77C8E40A249FC9E5 /* Pods-JFTOperationPool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		285B2F905D5956099046B7B9BA4DBCDC /* JFTOperationRequestCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B78C44D8E469FD87F394B7D24C5E2E /* JFTOperationRequestCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3378E4ED3564F608F095F7C4006DB566 /* JFTOperationPool.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C21F856113C0F25293EB417654119 /* JFTOperationPool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3716DCFCC53BF742810F308FAA68A22A /* JFTAtlasRenderOperationPool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD174A4263CFF585A6E3C3A82C28A7D /* JFTAtlasRenderOperationPool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		47CE36F665B7E33FFD73BE33CF5A3C7C /* JFTOperationPool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A85508B6961499A18FE0B659671D8 /* JFTOperationPool-dummy.m */; };
-		5054986EEB9584C18E7353092AEFA939 /* Pods-JFTOperationPool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 239690257BAE8D552D6C5877BFB20BD7 /* Pods-JFTOperationPool-dummy.m */; };
-		60405564E74DAF07B151807883D42AAC /* JFTOperationRequestElement.h in Headers */ = {isa = PBXBuildFile; fileRef = C911CD63A2F6E4D87306E01CA4FD0109 /* JFTOperationRequestElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF3102A561DC29D411C6CA323C6F2947 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		AF7A8D8B2CE2E8239468807DF005A1C9 /* JFTOperationPool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9CB29CB6CD4DB8BF9FFE9309D8B74C /* JFTOperationPool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0E352D700DCF1610E7B70E6F3F85040 /* JFTAtlasRenderElementOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F36565CC404AD034880182CC80896A34 /* JFTAtlasRenderElementOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F44741587750D11475270C7333326852 /* JFTAtlasRenderElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB565CC0AE08780AC3C22E290BB2B19 /* JFTAtlasRenderElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F8C4788F6C5085C8232F55A501BBCDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		FDA7F7BFE191DC044145636BD62EECC6 /* JFTAtlasRenderOperationPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 7691151E9DDFF02BF6F8DD742E405991 /* JFTAtlasRenderOperationPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000AC44EF46F7E6D6D32A92BAF9E5DCA /* Pods-JFTOperationPool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 239690257BAE8D552D6C5877BFB20BD7 /* Pods-JFTOperationPool-dummy.m */; };
+		075BFDEBE44836675FA5508BF92E84B5 /* JFTOperationPoolManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2928FAA729F8B1954E88F0A3A047D4AA /* JFTOperationPoolManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAB7CCF510D61B0370DBE59AA918B8D /* JFTOperationRequestElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 27ABC447C56EC66D26B8BFEFC1B27133 /* JFTOperationRequestElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E2B42AAF7BDDBAA517DDA07FC52DD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		52386962D3D6C74BFB3886559A63CCAC /* JFTOperationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 395DE08429740FCD05AD17E0CC8E4E8A /* JFTOperationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F91115CFBB31C0ACD6FEA222FDBD3E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		873C983FDFD2F1737B151F03915A9D8B /* JFTOperationRequestCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = AD732549555D2533A3A13243179CD7B4 /* JFTOperationRequestCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87CBEC7CFF5F4DA61EC6A0E8DAF2A34F /* JFTAtlasRenderOperationPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F7ACBE241102ABF4375C768752B26F /* JFTAtlasRenderOperationPool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ACA847A70C00E53AA64BFD241FAD8444 /* JFTOperationPoolManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E393A3DAF13C40B4EE7A1DEDA6600C83 /* JFTOperationPoolManager-dummy.m */; };
+		B2CA11AD6F02DE84B14A99A479F41043 /* Pods-JFTOperationPool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2043E70D05F2BE9C77C8E40A249FC9E5 /* Pods-JFTOperationPool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4E9517D62CA3CCADABB613DD572345E /* JFTAtlasRenderElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 047CD688B0B18AF088846E6B157FC64F /* JFTAtlasRenderElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B520EAA18B03C39B62FC8EBF9E7BB310 /* JFTOperationPool.h in Headers */ = {isa = PBXBuildFile; fileRef = D20910E3AA1EDFA17C5F5D1466C85994 /* JFTOperationPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF21E61461BA64FF4B6E19953310B4B8 /* JFTAtlasRenderElement.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB8E01E0568C62F1C6B6F4F1EBBD955 /* JFTAtlasRenderElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3DBCB5939DFDB69287263E1871BD22E /* JFTOperationPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E534FB59D860D9173603095E02388FEF /* JFTOperationPool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E18EF5B8E66D141CB52C89F6DEBFCB6A /* JFTAtlasRenderElementOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC0BDD3952B6C43C4C87A49032333A /* JFTAtlasRenderElementOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E61DFAE860797437C0680F386B8CFEC9 /* JFTAtlasRenderOperationPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 99EBBDBA2F7697DD7C1E7915CCCFDEEE /* JFTAtlasRenderOperationPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDAE99249C1F93561C891981800A974C /* JFTAtlasRenderElementOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC4654CE4496EEA105AA9E3445B65B11 /* JFTAtlasRenderElementOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C5072FD872C6AB0177A7FEEA29B4B00C /* PBXContainerItemProxy */ = {
+		EDAE06FB408FFC36B7ACB68F6A789BB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4EEFFF223261E6D41B56E8197E4CC3AE;
-			remoteInfo = JFTOperationPool;
+			remoteGlobalIDString = 801143FE895C0918AC00021848DE8A0F;
+			remoteInfo = JFTOperationPoolManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047CD688B0B18AF088846E6B157FC64F /* JFTAtlasRenderElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderElement.m; path = Classes/JFTAtlasRenderElement.m; sourceTree = "<group>"; };
 		04C9E226E866AAEBCD12505B50606A71 /* Pods-JFTOperationPool-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFTOperationPool-acknowledgements.plist"; sourceTree = "<group>"; };
+		0531066AA68571B3BE3B45337013ABD1 /* JFTOperationPoolManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFTOperationPoolManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		108F6B4962E92F70B79A4F6C156E3B8F /* JFTOperationPoolManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFTOperationPoolManager.debug.xcconfig; sourceTree = "<group>"; };
 		2043E70D05F2BE9C77C8E40A249FC9E5 /* Pods-JFTOperationPool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JFTOperationPool-umbrella.h"; sourceTree = "<group>"; };
 		239690257BAE8D552D6C5877BFB20BD7 /* Pods-JFTOperationPool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JFTOperationPool-dummy.m"; sourceTree = "<group>"; };
+		27ABC447C56EC66D26B8BFEFC1B27133 /* JFTOperationRequestElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationRequestElement.h; path = Classes/JFTOperationRequestElement.h; sourceTree = "<group>"; };
+		28F7ACBE241102ABF4375C768752B26F /* JFTAtlasRenderOperationPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderOperationPool.m; path = Classes/JFTAtlasRenderOperationPool.m; sourceTree = "<group>"; };
+		2928FAA729F8B1954E88F0A3A047D4AA /* JFTOperationPoolManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFTOperationPoolManager-umbrella.h"; sourceTree = "<group>"; };
+		30C1F6A80A8B7096543EDA40479465A4 /* JFTOperationPoolManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFTOperationPoolManager-prefix.pch"; sourceTree = "<group>"; };
+		31D0DC9653D9750112BC37ADF4C4E815 /* JFTOperationPoolManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFTOperationPoolManager-Info.plist"; sourceTree = "<group>"; };
 		33CB2868E3476C6AC04F1DEAD8C164F3 /* Pods-JFTOperationPool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFTOperationPool.release.xcconfig"; sourceTree = "<group>"; };
-		3A9CB29CB6CD4DB8BF9FFE9309D8B74C /* JFTOperationPool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFTOperationPool-umbrella.h"; sourceTree = "<group>"; };
-		3C9A85508B6961499A18FE0B659671D8 /* JFTOperationPool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFTOperationPool-dummy.m"; sourceTree = "<group>"; };
+		395DE08429740FCD05AD17E0CC8E4E8A /* JFTOperationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationProtocol.h; path = Classes/JFTOperationProtocol.h; sourceTree = "<group>"; };
 		3CC4C24D8F67D580A88E2015C64BA77B /* Pods-JFTOperationPool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JFTOperationPool.debug.xcconfig"; sourceTree = "<group>"; };
-		45700050D2F31FCEABF2BA3015668C71 /* JFTOperationPool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFTOperationPool.debug.xcconfig; sourceTree = "<group>"; };
-		4CFFF1FE0D71DE64F310A07CB5CEFBA9 /* JFTAtlasRenderElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderElement.h; path = Classes/JFTAtlasRenderElement.h; sourceTree = "<group>"; };
-		536F76B71A787E5BB4B1B02DDCEFA014 /* JFTOperationPool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JFTOperationPool.framework; path = JFTOperationPool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C7AB55C232181DF35246E56A1C9D2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		59158A1B066841D55FF600027CDCBCC0 /* JFTOperationPoolManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFTOperationPoolManager.modulemap; sourceTree = "<group>"; };
 		6BFE09B475FFEF00842E3446F6E52299 /* Pods-JFTOperationPool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JFTOperationPool.modulemap"; sourceTree = "<group>"; };
-		6C93D76C37D00C7E6315E76D935AD1FB /* JFTOperationPool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JFTOperationPool-Info.plist"; sourceTree = "<group>"; };
-		71C9C6DAB840FEADF8EE023E1A644967 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7691151E9DDFF02BF6F8DD742E405991 /* JFTAtlasRenderOperationPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderOperationPool.h; path = Classes/JFTAtlasRenderOperationPool.h; sourceTree = "<group>"; };
+		84EC0BDD3952B6C43C4C87A49032333A /* JFTAtlasRenderElementOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderElementOperation.m; path = Classes/JFTAtlasRenderElementOperation.m; sourceTree = "<group>"; };
 		851DE953E6A17CABEF65A6CCEB024766 /* Pods-JFTOperationPool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JFTOperationPool-Info.plist"; sourceTree = "<group>"; };
 		8F63496D11F5308CDA1FDD909B73F902 /* Pods-JFTOperationPool-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JFTOperationPool-frameworks.sh"; sourceTree = "<group>"; };
-		8FD195DE8853DAC0E77A5C120D7ED184 /* JFTOperationPool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFTOperationPool-prefix.pch"; sourceTree = "<group>"; };
-		94273C80EF1E7B035F7656C9A866764F /* JFTOperationPool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFTOperationPool.release.xcconfig; sourceTree = "<group>"; };
-		9628777E85FAB5EE2A964F7444C08D8F /* JFTOperationPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationPool.h; path = Classes/JFTOperationPool.h; sourceTree = "<group>"; };
+		99EBBDBA2F7697DD7C1E7915CCCFDEEE /* JFTAtlasRenderOperationPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderOperationPool.h; path = Classes/JFTAtlasRenderOperationPool.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD5629B074898E0760DC2F4FACAD237 /* Pods-JFTOperationPool-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFTOperationPool-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A1080271096B274E85330FF9152BFD06 /* JFTOperationPool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JFTOperationPool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B5B78C44D8E469FD87F394B7D24C5E2E /* JFTOperationRequestCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationRequestCreator.h; path = Classes/JFTOperationRequestCreator.h; sourceTree = "<group>"; };
-		B84C21F856113C0F25293EB417654119 /* JFTOperationPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTOperationPool.m; path = Classes/JFTOperationPool.m; sourceTree = "<group>"; };
-		BFD174A4263CFF585A6E3C3A82C28A7D /* JFTAtlasRenderOperationPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderOperationPool.m; path = Classes/JFTAtlasRenderOperationPool.m; sourceTree = "<group>"; };
-		C911CD63A2F6E4D87306E01CA4FD0109 /* JFTOperationRequestElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationRequestElement.h; path = Classes/JFTOperationRequestElement.h; sourceTree = "<group>"; };
-		CBB565CC0AE08780AC3C22E290BB2B19 /* JFTAtlasRenderElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderElement.m; path = Classes/JFTAtlasRenderElement.m; sourceTree = "<group>"; };
-		CEA45E45AA187F21B60ACEAF0597833F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		E39A8E58DC95DE63082FE4004951F13A /* JFTOperationPool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JFTOperationPool.modulemap; sourceTree = "<group>"; };
-		F0037439AB75EB9A24B46FF86B350338 /* JFTAtlasRenderElementOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderElementOperation.h; path = Classes/JFTAtlasRenderElementOperation.h; sourceTree = "<group>"; };
-		F36565CC404AD034880182CC80896A34 /* JFTAtlasRenderElementOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTAtlasRenderElementOperation.m; path = Classes/JFTAtlasRenderElementOperation.m; sourceTree = "<group>"; };
+		AC4654CE4496EEA105AA9E3445B65B11 /* JFTAtlasRenderElementOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderElementOperation.h; path = Classes/JFTAtlasRenderElementOperation.h; sourceTree = "<group>"; };
+		AD732549555D2533A3A13243179CD7B4 /* JFTOperationRequestCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationRequestCreator.h; path = Classes/JFTOperationRequestCreator.h; sourceTree = "<group>"; };
+		D20910E3AA1EDFA17C5F5D1466C85994 /* JFTOperationPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTOperationPool.h; path = Classes/JFTOperationPool.h; sourceTree = "<group>"; };
+		E393A3DAF13C40B4EE7A1DEDA6600C83 /* JFTOperationPoolManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFTOperationPoolManager-dummy.m"; sourceTree = "<group>"; };
+		E534FB59D860D9173603095E02388FEF /* JFTOperationPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFTOperationPool.m; path = Classes/JFTOperationPool.m; sourceTree = "<group>"; };
+		EB69A1D6E8F6136BAD58B6F5DC3F5C84 /* JFTOperationPoolManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JFTOperationPoolManager.framework; path = JFTOperationPoolManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB8E01E0568C62F1C6B6F4F1EBBD955 /* JFTAtlasRenderElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFTAtlasRenderElement.h; path = Classes/JFTAtlasRenderElement.h; sourceTree = "<group>"; };
+		EEDB2DA8CB15CC27C9D26A0F54862C51 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		FAECF67C0B18988D267BC6227BAA3BC2 /* Pods_JFTOperationPool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JFTOperationPool.framework; path = "Pods-JFTOperationPool.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB737950BCACACF7D20F586285535C1 /* JFTOperationPoolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFTOperationPoolManager.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		31E036FBA48C2278BA20A2BCDFFB06CC /* Frameworks */ = {
+		944B5312699EF8A9E4B05FA095D88AF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3102A561DC29D411C6CA323C6F2947 /* Foundation.framework in Frameworks */,
+				34E2B42AAF7BDDBAA517DDA07FC52DD0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD16E95B8F8B6E20D6E0BFE0673E9977 /* Frameworks */ = {
+		B2741AF839F9B7F5F60FFF3536D92188 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C4788F6C5085C8232F55A501BBCDB6 /* Foundation.framework in Frameworks */,
+				7F91115CFBB31C0ACD6FEA222FDBD3E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,25 +101,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		02D4A1690C75DDB01EA3D80CCCD16565 /* Support Files */ = {
+		36622429120869DCEA21792ECAEE3E14 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E39A8E58DC95DE63082FE4004951F13A /* JFTOperationPool.modulemap */,
-				3C9A85508B6961499A18FE0B659671D8 /* JFTOperationPool-dummy.m */,
-				6C93D76C37D00C7E6315E76D935AD1FB /* JFTOperationPool-Info.plist */,
-				8FD195DE8853DAC0E77A5C120D7ED184 /* JFTOperationPool-prefix.pch */,
-				3A9CB29CB6CD4DB8BF9FFE9309D8B74C /* JFTOperationPool-umbrella.h */,
-				45700050D2F31FCEABF2BA3015668C71 /* JFTOperationPool.debug.xcconfig */,
-				94273C80EF1E7B035F7656C9A866764F /* JFTOperationPool.release.xcconfig */,
+				E082032E3AFDA2CFC45C0706595943D6 /* JFTOperationPoolManager */,
 			);
-			name = "Support Files";
-			path = "JFTOperationPool/Pods/Target Support Files/JFTOperationPool";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		1D177608845E0B84515B806899ABBE69 /* Products */ = {
+		42A493200B0C4F4337CAD1BAB5F317CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				536F76B71A787E5BB4B1B02DDCEFA014 /* JFTOperationPool.framework */,
+				EB69A1D6E8F6136BAD58B6F5DC3F5C84 /* JFTOperationPoolManager.framework */,
 				FAECF67C0B18988D267BC6227BAA3BC2 /* Pods_JFTOperationPool.framework */,
 			);
 			name = Products;
@@ -131,20 +126,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		610BC607A1361C137403A5C021328ABE /* Development Pods */ = {
+		6B919589BA261D862712C6B86AB30C7B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE3636CD59E67F08ACD93E46ABD878FA /* JFTOperationPool */,
+				59158A1B066841D55FF600027CDCBCC0 /* JFTOperationPoolManager.modulemap */,
+				E393A3DAF13C40B4EE7A1DEDA6600C83 /* JFTOperationPoolManager-dummy.m */,
+				31D0DC9653D9750112BC37ADF4C4E815 /* JFTOperationPoolManager-Info.plist */,
+				30C1F6A80A8B7096543EDA40479465A4 /* JFTOperationPoolManager-prefix.pch */,
+				2928FAA729F8B1954E88F0A3A047D4AA /* JFTOperationPoolManager-umbrella.h */,
+				108F6B4962E92F70B79A4F6C156E3B8F /* JFTOperationPoolManager.debug.xcconfig */,
+				FEB737950BCACACF7D20F586285535C1 /* JFTOperationPoolManager.release.xcconfig */,
 			);
-			name = "Development Pods";
+			name = "Support Files";
+			path = "JFTOperationPool/Pods/Target Support Files/JFTOperationPoolManager";
 			sourceTree = "<group>";
 		};
-		71BAD352872F98103C34EB3A3F6526CD /* Pod */ = {
+		9289809F81E3C33A8121DFEB29D47660 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A1080271096B274E85330FF9152BFD06 /* JFTOperationPool.podspec */,
-				71C9C6DAB840FEADF8EE023E1A644967 /* LICENSE */,
-				CEA45E45AA187F21B60ACEAF0597833F /* README.md */,
+				0531066AA68571B3BE3B45337013ABD1 /* JFTOperationPoolManager.podspec */,
+				EEDB2DA8CB15CC27C9D26A0F54862C51 /* LICENSE */,
+				56C7AB55C232181DF35246E56A1C9D2D /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -153,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				610BC607A1361C137403A5C021328ABE /* Development Pods */,
+				36622429120869DCEA21792ECAEE3E14 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1D177608845E0B84515B806899ABBE69 /* Products */,
+				42A493200B0C4F4337CAD1BAB5F317CB /* Products */,
 				0006003DCA0656A85A3C04E7F1C7C000 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +168,27 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E082032E3AFDA2CFC45C0706595943D6 /* JFTOperationPoolManager */ = {
+			isa = PBXGroup;
+			children = (
+				ECB8E01E0568C62F1C6B6F4F1EBBD955 /* JFTAtlasRenderElement.h */,
+				047CD688B0B18AF088846E6B157FC64F /* JFTAtlasRenderElement.m */,
+				AC4654CE4496EEA105AA9E3445B65B11 /* JFTAtlasRenderElementOperation.h */,
+				84EC0BDD3952B6C43C4C87A49032333A /* JFTAtlasRenderElementOperation.m */,
+				99EBBDBA2F7697DD7C1E7915CCCFDEEE /* JFTAtlasRenderOperationPool.h */,
+				28F7ACBE241102ABF4375C768752B26F /* JFTAtlasRenderOperationPool.m */,
+				D20910E3AA1EDFA17C5F5D1466C85994 /* JFTOperationPool.h */,
+				E534FB59D860D9173603095E02388FEF /* JFTOperationPool.m */,
+				395DE08429740FCD05AD17E0CC8E4E8A /* JFTOperationProtocol.h */,
+				AD732549555D2533A3A13243179CD7B4 /* JFTOperationRequestCreator.h */,
+				27ABC447C56EC66D26B8BFEFC1B27133 /* JFTOperationRequestElement.h */,
+				9289809F81E3C33A8121DFEB29D47660 /* Pod */,
+				6B919589BA261D862712C6B86AB30C7B /* Support Files */,
+			);
+			name = JFTOperationPoolManager;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		EFE1A1BE5B0F2C1DCC61D8186DE1EE02 /* Pods-JFTOperationPool */ = {
@@ -185,85 +208,66 @@
 			path = "Target Support Files/Pods-JFTOperationPool";
 			sourceTree = "<group>";
 		};
-		FE3636CD59E67F08ACD93E46ABD878FA /* JFTOperationPool */ = {
-			isa = PBXGroup;
-			children = (
-				4CFFF1FE0D71DE64F310A07CB5CEFBA9 /* JFTAtlasRenderElement.h */,
-				CBB565CC0AE08780AC3C22E290BB2B19 /* JFTAtlasRenderElement.m */,
-				F0037439AB75EB9A24B46FF86B350338 /* JFTAtlasRenderElementOperation.h */,
-				F36565CC404AD034880182CC80896A34 /* JFTAtlasRenderElementOperation.m */,
-				7691151E9DDFF02BF6F8DD742E405991 /* JFTAtlasRenderOperationPool.h */,
-				BFD174A4263CFF585A6E3C3A82C28A7D /* JFTAtlasRenderOperationPool.m */,
-				9628777E85FAB5EE2A964F7444C08D8F /* JFTOperationPool.h */,
-				B84C21F856113C0F25293EB417654119 /* JFTOperationPool.m */,
-				B5B78C44D8E469FD87F394B7D24C5E2E /* JFTOperationRequestCreator.h */,
-				C911CD63A2F6E4D87306E01CA4FD0109 /* JFTOperationRequestElement.h */,
-				71BAD352872F98103C34EB3A3F6526CD /* Pod */,
-				02D4A1690C75DDB01EA3D80CCCD16565 /* Support Files */,
-			);
-			name = JFTOperationPool;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1592874577E93CB75A8898516C611E6F /* Headers */ = {
+		CCF87B7E7799F33F167A2A441BFB153B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D0968AE6BDA68C29319FFF6884B294 /* Pods-JFTOperationPool-umbrella.h in Headers */,
+				B2CA11AD6F02DE84B14A99A479F41043 /* Pods-JFTOperationPool-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20579DDC00C7E2EDCD98E877DC3A8761 /* Headers */ = {
+		E5264E9EE42371798BEDD902CE3D9E0E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				095E1F45802E0D3856E4A8A23196708E /* JFTAtlasRenderElement.h in Headers */,
-				02B7851323A48517E9C438B1F21F3528 /* JFTAtlasRenderElementOperation.h in Headers */,
-				FDA7F7BFE191DC044145636BD62EECC6 /* JFTAtlasRenderOperationPool.h in Headers */,
-				AF7A8D8B2CE2E8239468807DF005A1C9 /* JFTOperationPool-umbrella.h in Headers */,
-				15B7858079A137E513A3FF508085DB99 /* JFTOperationPool.h in Headers */,
-				285B2F905D5956099046B7B9BA4DBCDC /* JFTOperationRequestCreator.h in Headers */,
-				60405564E74DAF07B151807883D42AAC /* JFTOperationRequestElement.h in Headers */,
+				CF21E61461BA64FF4B6E19953310B4B8 /* JFTAtlasRenderElement.h in Headers */,
+				EDAE99249C1F93561C891981800A974C /* JFTAtlasRenderElementOperation.h in Headers */,
+				E61DFAE860797437C0680F386B8CFEC9 /* JFTAtlasRenderOperationPool.h in Headers */,
+				B520EAA18B03C39B62FC8EBF9E7BB310 /* JFTOperationPool.h in Headers */,
+				075BFDEBE44836675FA5508BF92E84B5 /* JFTOperationPoolManager-umbrella.h in Headers */,
+				52386962D3D6C74BFB3886559A63CCAC /* JFTOperationProtocol.h in Headers */,
+				873C983FDFD2F1737B151F03915A9D8B /* JFTOperationRequestCreator.h in Headers */,
+				2FAB7CCF510D61B0370DBE59AA918B8D /* JFTOperationRequestElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4EEFFF223261E6D41B56E8197E4CC3AE /* JFTOperationPool */ = {
+		801143FE895C0918AC00021848DE8A0F /* JFTOperationPoolManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBB3FF6C4CA8C6CB0C3BB06F8CC266C0 /* Build configuration list for PBXNativeTarget "JFTOperationPool" */;
+			buildConfigurationList = 4E34ABD4A2BE0051D890A049B2C7C236 /* Build configuration list for PBXNativeTarget "JFTOperationPoolManager" */;
 			buildPhases = (
-				20579DDC00C7E2EDCD98E877DC3A8761 /* Headers */,
-				F8D4B3CBDF208CA1BF733BD4AE021D6F /* Sources */,
-				BD16E95B8F8B6E20D6E0BFE0673E9977 /* Frameworks */,
-				2A75DA6E12B5C209C14F9417A15B0DDE /* Resources */,
+				E5264E9EE42371798BEDD902CE3D9E0E /* Headers */,
+				4267DDA5B50B66A3561641214B57037A /* Sources */,
+				B2741AF839F9B7F5F60FFF3536D92188 /* Frameworks */,
+				1CE4097E152DF26BE2AAE36C7CDC2D11 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = JFTOperationPool;
-			productName = JFTOperationPool;
-			productReference = 536F76B71A787E5BB4B1B02DDCEFA014 /* JFTOperationPool.framework */;
+			name = JFTOperationPoolManager;
+			productName = JFTOperationPoolManager;
+			productReference = EB69A1D6E8F6136BAD58B6F5DC3F5C84 /* JFTOperationPoolManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EA00E80DE518539C1B459DC23FAD2F61 /* Pods-JFTOperationPool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97EBE812FD80C0817E4FD8403B44751D /* Build configuration list for PBXNativeTarget "Pods-JFTOperationPool" */;
+			buildConfigurationList = ECCD8AD22CB7B4A9DEF22A90F97BB0D3 /* Build configuration list for PBXNativeTarget "Pods-JFTOperationPool" */;
 			buildPhases = (
-				1592874577E93CB75A8898516C611E6F /* Headers */,
-				CC84892DA1EC531C359C60BFF9B3A0BC /* Sources */,
-				31E036FBA48C2278BA20A2BCDFFB06CC /* Frameworks */,
-				161C9A6AA1B45F1914448F4B27EF94A0 /* Resources */,
+				CCF87B7E7799F33F167A2A441BFB153B /* Headers */,
+				97B5A592C6EFF42A1405D50485CA6E05 /* Sources */,
+				944B5312699EF8A9E4B05FA095D88AF2 /* Frameworks */,
+				32F19CCF8AE3E5C3008C57B8A1EFFD36 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C2E32DE6835B9E372641DF0FADBE09C /* PBXTargetDependency */,
+				773702D1D4D1A8B9610DB7B2A2C56A69 /* PBXTargetDependency */,
 			);
 			name = "Pods-JFTOperationPool";
 			productName = "Pods-JFTOperationPool";
@@ -288,25 +292,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1D177608845E0B84515B806899ABBE69 /* Products */;
+			productRefGroup = 42A493200B0C4F4337CAD1BAB5F317CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4EEFFF223261E6D41B56E8197E4CC3AE /* JFTOperationPool */,
+				801143FE895C0918AC00021848DE8A0F /* JFTOperationPoolManager */,
 				EA00E80DE518539C1B459DC23FAD2F61 /* Pods-JFTOperationPool */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		161C9A6AA1B45F1914448F4B27EF94A0 /* Resources */ = {
+		1CE4097E152DF26BE2AAE36C7CDC2D11 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A75DA6E12B5C209C14F9417A15B0DDE /* Resources */ = {
+		32F19CCF8AE3E5C3008C57B8A1EFFD36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,74 +320,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC84892DA1EC531C359C60BFF9B3A0BC /* Sources */ = {
+		4267DDA5B50B66A3561641214B57037A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5054986EEB9584C18E7353092AEFA939 /* Pods-JFTOperationPool-dummy.m in Sources */,
+				B4E9517D62CA3CCADABB613DD572345E /* JFTAtlasRenderElement.m in Sources */,
+				E18EF5B8E66D141CB52C89F6DEBFCB6A /* JFTAtlasRenderElementOperation.m in Sources */,
+				87CBEC7CFF5F4DA61EC6A0E8DAF2A34F /* JFTAtlasRenderOperationPool.m in Sources */,
+				D3DBCB5939DFDB69287263E1871BD22E /* JFTOperationPool.m in Sources */,
+				ACA847A70C00E53AA64BFD241FAD8444 /* JFTOperationPoolManager-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8D4B3CBDF208CA1BF733BD4AE021D6F /* Sources */ = {
+		97B5A592C6EFF42A1405D50485CA6E05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44741587750D11475270C7333326852 /* JFTAtlasRenderElement.m in Sources */,
-				D0E352D700DCF1610E7B70E6F3F85040 /* JFTAtlasRenderElementOperation.m in Sources */,
-				3716DCFCC53BF742810F308FAA68A22A /* JFTAtlasRenderOperationPool.m in Sources */,
-				47CE36F665B7E33FFD73BE33CF5A3C7C /* JFTOperationPool-dummy.m in Sources */,
-				3378E4ED3564F608F095F7C4006DB566 /* JFTOperationPool.m in Sources */,
+				000AC44EF46F7E6D6D32A92BAF9E5DCA /* Pods-JFTOperationPool-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C2E32DE6835B9E372641DF0FADBE09C /* PBXTargetDependency */ = {
+		773702D1D4D1A8B9610DB7B2A2C56A69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = JFTOperationPool;
-			target = 4EEFFF223261E6D41B56E8197E4CC3AE /* JFTOperationPool */;
-			targetProxy = C5072FD872C6AB0177A7FEEA29B4B00C /* PBXContainerItemProxy */;
+			name = JFTOperationPoolManager;
+			target = 801143FE895C0918AC00021848DE8A0F /* JFTOperationPoolManager */;
+			targetProxy = EDAE06FB408FFC36B7ACB68F6A789BB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14F94EEB147D16FC90E7AFD6E54E9EEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CC4C24D8F67D580A88E2015C64BA77B /* Pods-JFTOperationPool.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JFTOperationPool/Pods-JFTOperationPool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JFTOperationPool/Pods-JFTOperationPool.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		82E1ED91BADBA8B0DD7E8008EFE6D5AB /* Release */ = {
+		560ACD3839A75302DEF4F51406FD482A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33CB2868E3476C6AC04F1DEAD8C164F3 /* Pods-JFTOperationPool.release.xcconfig */;
 			buildSettings = {
@@ -486,6 +454,75 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		A7CD7AEF9E3721CB4F4DC24B3F45DDA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CC4C24D8F67D580A88E2015C64BA77B /* Pods-JFTOperationPool.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JFTOperationPool/Pods-JFTOperationPool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JFTOperationPool/Pods-JFTOperationPool.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7B6EF836C460B5E528A037B2CDAA818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 108F6B4962E92F70B79A4F6C156E3B8F /* JFTOperationPoolManager.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager.modulemap";
+				PRODUCT_MODULE_NAME = JFTOperationPoolManager;
+				PRODUCT_NAME = JFTOperationPoolManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -549,9 +586,9 @@
 			};
 			name = Release;
 		};
-		DDE379619784DC8A52C856792FA15D65 /* Debug */ = {
+		CB3B62D7B964789E64583034FC3FBAE7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45700050D2F31FCEABF2BA3015668C71 /* JFTOperationPool.debug.xcconfig */;
+			baseConfigurationReference = FEB737950BCACACF7D20F586285535C1 /* JFTOperationPoolManager.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -561,8 +598,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFTOperationPool/JFTOperationPool-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFTOperationPool/JFTOperationPool-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,42 +607,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/JFTOperationPool/JFTOperationPool.modulemap";
-				PRODUCT_MODULE_NAME = JFTOperationPool;
-				PRODUCT_NAME = JFTOperationPool;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F8F21DEE563146DC513B0CEEA869F105 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94273C80EF1E7B035F7656C9A866764F /* JFTOperationPool.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JFTOperationPool/JFTOperationPool-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JFTOperationPool/JFTOperationPool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/JFTOperationPool/JFTOperationPool.modulemap";
-				PRODUCT_MODULE_NAME = JFTOperationPool;
-				PRODUCT_NAME = JFTOperationPool;
+				MODULEMAP_FILE = "Target Support Files/JFTOperationPoolManager/JFTOperationPoolManager.modulemap";
+				PRODUCT_MODULE_NAME = JFTOperationPoolManager;
+				PRODUCT_NAME = JFTOperationPoolManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -628,20 +632,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97EBE812FD80C0817E4FD8403B44751D /* Build configuration list for PBXNativeTarget "Pods-JFTOperationPool" */ = {
+		4E34ABD4A2BE0051D890A049B2C7C236 /* Build configuration list for PBXNativeTarget "JFTOperationPoolManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14F94EEB147D16FC90E7AFD6E54E9EEB /* Debug */,
-				82E1ED91BADBA8B0DD7E8008EFE6D5AB /* Release */,
+				C7B6EF836C460B5E528A037B2CDAA818 /* Debug */,
+				CB3B62D7B964789E64583034FC3FBAE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBB3FF6C4CA8C6CB0C3BB06F8CC266C0 /* Build configuration list for PBXNativeTarget "JFTOperationPool" */ = {
+		ECCD8AD22CB7B4A9DEF22A90F97BB0D3 /* Build configuration list for PBXNativeTarget "Pods-JFTOperationPool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDE379619784DC8A52C856792FA15D65 /* Debug */,
-				F8F21DEE563146DC513B0CEEA869F105 /* Release */,
+				A7CD7AEF9E3721CB4F4DC24B3F45DDA7 /* Debug */,
+				560ACD3839A75302DEF4F51406FD482A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

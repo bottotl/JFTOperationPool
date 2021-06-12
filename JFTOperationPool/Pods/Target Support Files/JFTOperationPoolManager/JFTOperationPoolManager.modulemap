@@ -1,0 +1,6 @@
+framework module JFTOperationPoolManager {
+  umbrella header "JFTOperationPoolManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

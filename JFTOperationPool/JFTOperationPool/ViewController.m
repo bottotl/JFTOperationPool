@@ -20,7 +20,7 @@
     _operationPool = [[JFTAtlasRenderOperationPool alloc] initWithMaxConcurrentOperationCount:5];
     for (int i = 0; i < 10; i++) {
         JFTAtlasRenderElement *element = [[JFTAtlasRenderElement alloc] initWithNumber:@(2)];
-        JFTOperationRequestID requestID = [_operationPool requestWithElement:element completion:^(__kindof NSOperation * _Nonnull operation, JFTOperationRequestID requestID) {
+        JFTOperationRequestID requestID = [_operationPool requestWithElement:element completion:^(__kindof NSOperation * _Nullable operation, JFTOperationRequestID requestID, NSError * _Nullable error) {
             NSLog(@"[%@] finish", @(requestID));
         }];
         if (i > 7) {

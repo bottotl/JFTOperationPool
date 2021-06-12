@@ -7,7 +7,11 @@
 
 #import "JFTOperationPool.h"
 
-
+#if defined(__cplusplus)
+#define let auto const
+#else
+#define let const __auto_type
+#endif
 
 @interface JFTOperationPool ()
 
@@ -21,44 +25,68 @@
 /// 对外暴露的请求 id，RequestID 和 NSOperation 是多对一关系
 @property (nonatomic) JFTOperationRequestID lastRequestID;
 
-@property (nonatomic) id<JFTOperationRequestCreator> operationCreator;
-
 /// cache key --> NSOperation
-@property (nonatomic) NSMapTable<NSString *, NSOperation *> *cacheKeyToOperationsMapTable;
+@property (nonatomic) NSMapTable<NSString *, NSOperation<JFTOperationProtocol> *> *cacheKeyToOperationsMapTable;
 
 /// requestID -->  NSOperation
 /// 当没有 requestID 对 NSOperation 引用以后，真正执行 [NSOperation cancel];
-@property (nonatomic) NSMapTable<NSNumber *, NSOperation *> *requestIdToOperationsMapTable;
+@property (nonatomic) NSMapTable<NSNumber *, NSOperation<JFTOperationProtocol> *> *requestIdToOperationsMapTable;
 
 /// requestID --> Completion
+/// 回调执行时机分为三种情况：
+///     1. 请求发出的时候任务已经成功
+///     2. 任务执行完毕后回调 - NSOperation.completionBlock 调用的时候回调
+///     3. 任务被取消 - cancel 被调用的时候
 @property (nonatomic) NSMutableDictionary<NSNumber *, JFTOperationCompletion> *completions;
+
+#if DEBUG || DETA
+@property (nonatomic) NSMutableSet<NSNumber *> *cancelledRequest;
+@property (nonatomic) NSMutableSet<NSNumber *> *finishedRequest;
+#endif
 
 @end
 
 @implementation JFTOperationPool
 
-- (instancetype)initWithMaxConcurrentOperationCount:(NSInteger)maxConcurrentOperationCount {
+- (instancetype)initWithRequestOperationQueue:(NSOperationQueue *)queue {
     if (self = [super init]) {
-        _dataQueue = [NSOperationQueue new];
-        _dataQueue.name = @"com.jft0m.operation.data";
-        _dataQueue.maxConcurrentOperationCount = 1;
-        
-        _outQueue = [NSOperationQueue new];
-        _outQueue.name = @"com.jft0m.operation.out";
-        
-        _requestQueue = [NSOperationQueue new];
-        _requestQueue.name = @"com.jft0m.operation.request";
-        _requestQueue.maxConcurrentOperationCount = maxConcurrentOperationCount;
-        
-        _cacheKeyToOperationsMapTable = [NSMapTable strongToWeakObjectsMapTable];
-        _requestIdToOperationsMapTable = [NSMapTable strongToWeakObjectsMapTable];
-        _completions = [NSMutableDictionary new];
+        _requestQueue = queue;
+        [self commonInit];
     }
     return self;
 }
 
+- (instancetype)initWithMaxConcurrentOperationCount:(NSInteger)maxConcurrentOperationCount {
+    if (self = [super init]) {
+        _requestQueue = [NSOperationQueue new];
+        _requestQueue.name = @"com.jft0m.operation.request";
+        _requestQueue.maxConcurrentOperationCount = maxConcurrentOperationCount;
+        [self commonInit];
+        
+        #if DEBUG || DETA
+        _cancelledRequest = [NSMutableSet new];
+        _finishedRequest = [NSMutableSet new];
+        #endif
+    }
+    return self;
+}
+
+- (void)commonInit {
+    _dataQueue = [NSOperationQueue new];
+    _dataQueue.name = @"com.jft0m.operation.data";
+    _dataQueue.maxConcurrentOperationCount = 1;
+    
+    _outQueue = [NSOperationQueue new];
+    _outQueue.name = @"com.jft0m.operation.out";
+    
+    _cacheKeyToOperationsMapTable = [NSMapTable strongToWeakObjectsMapTable];
+    _requestIdToOperationsMapTable = [NSMapTable strongToWeakObjectsMapTable];
+    _completions = [NSMutableDictionary new];
+}
+
 - (JFTOperationRequestID)requestWithElement:(id<JFTOperationRequestElement>)element completion:(JFTOperationCompletion)completion {
     JFTOperationRequestID requestID = [self makeRequestID];
+    NSLog(@"[completion][%@] commit request - %@", @(requestID), element.cacheKey);
     [self.dataQueue addOperationWithBlock:^{
         [self.completions setObject:completion forKey:@(requestID)];
         [self createOperationIfNeededWithElement:element requestID:requestID];
@@ -67,24 +95,51 @@
 }
 
 - (void)cancelRequestWithRequestID:(JFTOperationRequestID)requestID {
-    NSLog(@"[%@] cancel", @(requestID));
     [self.dataQueue addOperationWithBlock:^{
         NSDictionary<NSNumber *, NSOperation *> *dic = self.requestIdToOperationsMapTable.dictionaryRepresentation;
         __block int refCount = 0;
+        let requestIDKey = @(requestID);
+        NSLog(@"[completion][%@] - %@", requestIDKey, dic);
+        NSOperation *operation = dic[requestIDKey];
+        BOOL isFinished = operation.isFinished;
+        BOOL isCancelled = operation.isCancelled;
+        if (isFinished || isCancelled) {
+            NSLog(@"[completion][%@] cancel a %@ operation, 本次取消逻辑无效", isFinished ? @"finished" : @"cancelled" , requestIDKey);
+            return;
+        }
         [dic enumerateKeysAndObjectsUsingBlock:^(NSNumber * _Nonnull key, NSOperation * _Nonnull obj, BOOL * _Nonnull stop) {
-            if ([key isEqual:@(requestID)]) {
+            if ([operation isEqual:obj]) {
                 refCount++;
+                NSLog(@"[completion][%@] refCount++", requestIDKey);
             }
         }];
         if (refCount == 1) {
             // 本次移除以后，没有 requestID 对 operation 进行引用，这时候才需要真正执行 cancel
             // 反之，只需要移除引用即可
-            NSOperation *operation = dic[@(requestID)];
+            NSOperation *operation = dic[requestIDKey];
             [operation cancel];
-            NSLog(@"[%@] real cancel", @(requestID));
+            NSLog(@"[completion][%@] real cancel, completion will be executed after operation completionBlock called", requestIDKey);
+            return;
         }
-        [self.requestIdToOperationsMapTable removeObjectForKey:@(requestID)];
-        NSLog(@"[%@] did cancel", @(requestID));
+        [self.requestIdToOperationsMapTable removeObjectForKey:requestIDKey];
+        JFTOperationCompletion completion = self.completions[requestIDKey];
+        self.completions[requestIDKey] = nil;
+        if (completion) {
+            #if DEBUG || DETA
+            if ([self.finishedRequest containsObject:requestIDKey]) {
+                NSAssert(NO, @"重复回调");
+            }
+            [self.cancelledRequest addObject:requestIDKey];
+            #endif
+            
+            NSLog(@"[completion][%@] fake cancel, completion will be executed", requestIDKey);
+            [self.outQueue addOperationWithBlock:^{
+                completion(nil, requestID, [NSError errorWithDomain:@"com.jft0m.operation.pool"
+                                                               code:-1
+                                                           userInfo:@{ NSLocalizedDescriptionKey : @"cancel request" }]);
+                NSLog(@"[completion][%@] cancel request did called", requestIDKey);
+            }];
+        }
     }];
 }
 
@@ -106,13 +161,13 @@
     return _requestIdToOperationsMapTable;
 }
 
-- (NSOperation *)operationWithElement:(id<JFTOperationRequestElement>)element {
+- (NSOperation<JFTOperationProtocol> *)operationWithElement:(id<JFTOperationRequestElement>)element {
     NSAssert([NSOperationQueue currentQueue] == self.dataQueue, @"must call in dataQueue");
     
     NSString *cacheKey = [element cacheKey];
     
-    NSOperation *operation = [self cachedOperation:cacheKey];
-    if (!operation) {
+    NSOperation<JFTOperationProtocol> *operation = [self cachedOperation:cacheKey];
+    if (!operation || operation.error || operation.cancelled) {
         operation = [self createOperationWithElement:element];
         [self.cacheKeyToOperationsMapTable setObject:operation forKey:cacheKey];
         __weak typeof(operation) weakOperation = operation;
@@ -121,27 +176,30 @@
             [weakSelf didFinishOperation:weakOperation];
         };
         [self.requestQueue addOperation:operation];
+    } else {
+        NSLog(@"[completion] 任务成功复用 - %@", self.cacheKeyToOperationsMapTable);
     }
+    
     return operation;
 }
 
-- (NSOperation *)cachedOperation:(NSString *)cacheKey {
+- (NSOperation<JFTOperationProtocol> *)cachedOperation:(NSString *)cacheKey {
     NSAssert([NSOperationQueue currentQueue] == self.dataQueue, @"must call in dataQueue");
     return [self.cacheKeyToOperationsMapTable objectForKey:cacheKey];
 }
 
 - (void)createOperationIfNeededWithElement:(id<JFTOperationRequestElement>)element requestID:(JFTOperationRequestID)requestID {
     NSAssert([NSOperationQueue currentQueue] == self.dataQueue, @"must call in dataQueue");
-    NSOperation *operation = [self operationWithElement:element];
-    if (operation.isFinished) {
-        NSLog(@"[%@]该任务已经完成，无需执行直接回调", @(requestID));
-        [self executeCompletions:operation];
-        return;
-    }
+    NSOperation<JFTOperationProtocol> *operation = [self operationWithElement:element];
     if (!operation) {
         NSParameterAssert(operation);
     } else {
         [self.requestIdToOperationsMapTable setObject:operation forKey:@(requestID)];
+    }
+    NSLog(@"[completion][%@] create operation %@", @(requestID), operation);
+    if (operation.isFinished || operation.isCancelled) {
+        NSLog(@"[completion][%@] 该任务已经完成，无需执行直接回调", @(requestID));
+        [self executeCompletions:operation];
     }
 }
 
@@ -150,7 +208,7 @@
     return nil;
 }
 
-- (void)didFinishOperation:(NSOperation *)operation {
+- (void)didFinishOperation:(NSOperation<JFTOperationProtocol> *)operation {
     __weak typeof(self) weakSelf = self;
     [self.dataQueue addOperationWithBlock:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -158,19 +216,27 @@
     }];
 }
 
-- (void)executeCompletions:(NSOperation *)operation {
+- (void)executeCompletions:(NSOperation<JFTOperationProtocol> *)operation {
     NSSet<NSNumber *> *requestIDSetForOperation = [self requestIDSetForOperation:operation];
     [self.completions enumerateKeysAndObjectsUsingBlock:^(NSNumber * _Nonnull key, JFTOperationCompletion  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([requestIDSetForOperation containsObject:key]) {
+            #if DEBUG || DETA
+            if ([_cancelledRequest containsObject:key]) {
+                NSAssert(NO, @"重复回调");
+            }
+            [_finishedRequest addObject:key];
+            #endif
+            
             [self.outQueue addOperationWithBlock:^{
-                obj(operation, key.intValue);
+                obj(operation, key.intValue, [operation error]);
+                NSLog(@"[completion][%@] finish request", key);
             }];
         }
     }];
     [self.completions removeObjectsForKeys:requestIDSetForOperation.allObjects];
 }
 
-- (NSSet<NSNumber *> *)requestIDSetForOperation:(NSOperation *)operation {
+- (NSSet<NSNumber *> *)requestIDSetForOperation:(NSOperation<JFTOperationProtocol> *)operation {
     NSAssert([NSOperationQueue currentQueue] == self.dataQueue, @"must call in dataQueue");
     NSDictionary *dic = [self.requestIdToOperationsMapTable dictionaryRepresentation];
     NSMutableOrderedSet<NSNumber *> *orderedSet = [NSMutableOrderedSet new];

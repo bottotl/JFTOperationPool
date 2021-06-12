@@ -14,9 +14,10 @@
 #import "JFTAtlasRenderElementOperation.h"
 #import "JFTAtlasRenderOperationPool.h"
 #import "JFTOperationPool.h"
+#import "JFTOperationProtocol.h"
 #import "JFTOperationRequestCreator.h"
 #import "JFTOperationRequestElement.h"
 
-FOUNDATION_EXPORT double JFTOperationPoolVersionNumber;
-FOUNDATION_EXPORT const unsigned char JFTOperationPoolVersionString[];
+FOUNDATION_EXPORT double JFTOperationPoolManagerVersionNumber;
+FOUNDATION_EXPORT const unsigned char JFTOperationPoolManagerVersionString[];
 

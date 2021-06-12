@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "JFTOperationPool"
+  spec.name         = "JFTOperationPoolManager"
   spec.version      = "1.0.0"
   spec.summary      = "任务复用管理器"
 

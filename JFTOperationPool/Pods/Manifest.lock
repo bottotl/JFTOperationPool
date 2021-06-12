@@ -1,16 +1,16 @@
 PODS:
-  - JFTOperationPool (1.0.0)
+  - JFTOperationPoolManager (1.0.0)
 
 DEPENDENCIES:
-  - JFTOperationPool (from `../`)
+  - JFTOperationPoolManager (from `../`)
 
 EXTERNAL SOURCES:
-  JFTOperationPool:
+  JFTOperationPoolManager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JFTOperationPool: 15b84bcf9495024a591213fbef4e17110afd43df
+  JFTOperationPoolManager: b269e67246bd074464716cff815a39199ad4a472
 
-PODFILE CHECKSUM: bba3030b9c2af5adcc44c66ec30c78eff049e239
+PODFILE CHECKSUM: 96a1ead80aef474c716c2b9368da61ef2d00d063
 
 COCOAPODS: 1.10.0
